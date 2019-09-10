@@ -1,8 +1,11 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Roboto;
-    color: white;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif; 
+}
+body{
+    max-width: 100%;
 }
 .container{
     max-width: 1200px;
@@ -11,15 +14,20 @@
 .header{
     background: linear-gradient(180deg, #3D81A0 52.6%, #327559 100%);
     display: flex;
-    justify-content: center
+    justify-content: center;
+    color: white;
+    min-width: 100px;
+    min-height: 100vh;
 }
 .titulo{
     justify-content: center;
     text-align: center;
+    overflow: hidden;
 }
 .paragrafo{
-    padding:0 300px 0 300px;
     text-align: center;
+    max-width: 500px;
+    margin:0 auto;
 }
 .btn{
     text-decoration: none;
@@ -30,7 +38,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    color: white;
 }
 .btn p{
     width: 100%;
@@ -38,5 +46,71 @@
     color: #fff;
 }
 .botoes>a{
-    margin: 13px 450px 0 450px;
+    margin: 13px 450px 20px 450px;
+}
+.navegacao{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.menu ul{
+    /*position: absolute;
+    left: 300px;
+    top: 30px;*/
+    list-style-type: none;    
+}
+.menu__hmb{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    display: none;
+}
+@media(max-width: 900px){
+    .menu{
+    display: none;
+    }
+    .menu__hmb{
+        display: inline;
+    }
+}
+.menu__lista>a{
+    padding: 0 70px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    color: white;
+}
+@media(max-width: 1142px){
+    .menu__lista>a{
+        padding: 0 20px;
+    }
+    .logo{
+        padding: 20px 500px;
+    }
+    .container{
+        max-width: 800px;
+    }
+    .botoes>a{
+        margin: 13px auto 20px auto;
+    }
+}
+.logo{
+    padding: 20px 90px;
+}
+.plant{
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.uml{
+    font-family: 'Crete Round', serif;
+    font-style: italic;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 0 0 0 60px;
 }
